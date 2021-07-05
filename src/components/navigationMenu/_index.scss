@@ -1,0 +1,25 @@
+@import '../../_base';
+
+.navigation {
+  position: relative;
+  width: 70px;
+  height: 500px;
+  background: $black-secondary;
+  box-shadow: 10px 0 0 $blue-primary;
+  border-left: 10px solid $black-secondary;
+  overflow-x: hidden;
+  transition: width 0.5s;
+
+  &:hover {
+    width: 300px;
+  }
+
+  ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+  }
+}

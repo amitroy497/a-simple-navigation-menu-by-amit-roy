@@ -1,0 +1,72 @@
+@import '../../_base';
+
+.list {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  cursor: context-menu;
+
+  &.active {
+    background: $blue-primary;
+    cursor: default;
+
+    div::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: 0;
+      width: 30px;
+      height: 30px;
+      background: $black-secondary;
+      border-radius: 50%;
+      box-shadow: 15px 15px 0 $blue-primary;
+    }
+
+    div::after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      right: 0;
+      width: 30px;
+      height: 30px;
+      background: $black-secondary;
+      border-radius: 50%;
+      box-shadow: 15px -15px 0 $blue-primary;
+    }
+  }
+
+  div {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: $white-primary;
+
+    .icon {
+      position: relative;
+      display: block;
+      min-width: 60px;
+      height: 60px;
+      line-height: 70px;
+      text-align: center;
+
+      ion-icon {
+        position: relative;
+        font-size: 1.5em;
+        z-index: 1;
+      }
+    }
+
+    .title {
+      position: relative;
+      display: block;
+      padding-left: 10px;
+      height: 60px;
+      line-height: 60px;
+      white-space: nowrap;
+    }
+  }
+}
